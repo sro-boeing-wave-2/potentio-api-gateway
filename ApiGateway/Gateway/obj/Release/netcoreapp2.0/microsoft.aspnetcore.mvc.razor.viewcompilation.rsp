@@ -1,0 +1,5 @@
+C:\Workspace\ocelot-gateway-sample\Gateway
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=Gateway
+--content-root=C:\Workspace\ocelot-gateway-sample\Gateway
+--file=

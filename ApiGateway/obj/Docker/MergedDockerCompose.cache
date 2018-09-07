@@ -1,0 +1,43 @@
+services:
+  gateway:
+    build:
+      context: E:\potentio-api-gateway\ApiGateway\Gateway
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: gateway
+    ports:
+    - target: 80
+  nosql.data:
+    image: mongo
+    ports:
+    - published: 27017
+      target: 27017
+  servicea:
+    build:
+      context: E:\potentio-api-gateway\ApiGateway\QuestionBank\Admin\Admin
+      dockerfile: Dockerfile
+    depends_on:
+    - nosql.data
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: questionbank
+    ports:
+    - target: 80
+  serviceb:
+    build:
+      context: E:\potentio-api-gateway\ApiGateway\UserLogin\UserLoginAPI\UserLoginAPI
+      dockerfile: dockerfile
+    depends_on:
+    - sql.data
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: userlogin
+    ports:
+    - target: 80
+  sql.data:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: YourStrongP@ssword
+    image: microsoft/mssql-server-linux:2017-latest
+version: '3.4'

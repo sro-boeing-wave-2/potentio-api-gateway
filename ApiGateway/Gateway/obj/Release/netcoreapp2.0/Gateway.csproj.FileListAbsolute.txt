@@ -1,0 +1,11 @@
+C:\Workspace\ocelot-gateway-sample\Gateway\bin\Release\netcoreapp2.0\Gateway.deps.json
+C:\Workspace\ocelot-gateway-sample\Gateway\bin\Release\netcoreapp2.0\Gateway.runtimeconfig.json
+C:\Workspace\ocelot-gateway-sample\Gateway\bin\Release\netcoreapp2.0\Gateway.runtimeconfig.dev.json
+C:\Workspace\ocelot-gateway-sample\Gateway\bin\Release\netcoreapp2.0\Gateway.dll
+C:\Workspace\ocelot-gateway-sample\Gateway\bin\Release\netcoreapp2.0\Gateway.pdb
+C:\Workspace\ocelot-gateway-sample\Gateway\obj\Release\netcoreapp2.0\Gateway.csprojAssemblyReference.cache
+C:\Workspace\ocelot-gateway-sample\Gateway\obj\Release\netcoreapp2.0\Gateway.csproj.CoreCompileInputs.cache
+C:\Workspace\ocelot-gateway-sample\Gateway\obj\Release\netcoreapp2.0\Gateway.AssemblyInfoInputs.cache
+C:\Workspace\ocelot-gateway-sample\Gateway\obj\Release\netcoreapp2.0\Gateway.AssemblyInfo.cs
+C:\Workspace\ocelot-gateway-sample\Gateway\obj\Release\netcoreapp2.0\Gateway.dll
+C:\Workspace\ocelot-gateway-sample\Gateway\obj\Release\netcoreapp2.0\Gateway.pdb
