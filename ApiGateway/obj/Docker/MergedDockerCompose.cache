@@ -27,7 +27,7 @@ services:
   serviceb:
     build:
       context: E:\potentio-api-gateway\ApiGateway\UserLogin\UserLoginAPI\UserLoginAPI
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     depends_on:
     - sql.data
     environment:
@@ -35,6 +35,13 @@ services:
     image: userlogin
     ports:
     - target: 80
+  servicec:
+    build:
+      context: E:\potentio-api-gateway\ApiGateway\Result\Result\Result
+      dockerfile: Dockerfile
+    depends_on:
+    - nosql.data
+    image: result
   sql.data:
     environment:
       ACCEPT_EULA: "Y"

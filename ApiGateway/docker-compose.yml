@@ -24,9 +24,17 @@ services:
     image: userlogin
     build:
       context: ./UserLogin/UserLoginAPI/UserLoginAPI
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     depends_on:
       - sql.data
+
+  servicec:
+    image: result
+    build:
+      context: ./Result/Result/Result
+      dockerfile: Dockerfile
+    depends_on:
+      - nosql.data
 
   gateway:
     image: gateway

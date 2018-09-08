@@ -31,6 +31,22 @@
       "DownstreamHost": "serviceb",
       "UpstreamPathTemplate": "/b/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+    },
+    {
+      "DownstreamPathTemplate": "/",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 80,
+      "DownstreamHost": "servicec",
+      "UpstreamPathTemplate": "/c/",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 80,
+      "DownstreamHost": "servicec",
+      "UpstreamPathTemplate": "/c/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
     }
   ],
   "GlobalConfiguration": {}
