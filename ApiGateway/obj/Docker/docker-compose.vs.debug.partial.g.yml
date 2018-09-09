@@ -10,7 +10,7 @@ services:
       - DOTNET_USE_POLLING_FILE_WATCHER=1
       #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_gateway$
     volumes:
-      - E:\potentio-api-gateway\ApiGateway\Gateway:/app
+      - D:\potenti-o-meter gateway\ApiGateway\Gateway:/app
       - C:\Users\Admin\vsdbg\vs2017u5:/remote_debugger:ro
 #$nuget_volume_mapping_gateway$
     entrypoint: tail -f /dev/null
@@ -28,7 +28,7 @@ services:
       - DOTNET_USE_POLLING_FILE_WATCHER=1
       #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_servicea$
     volumes:
-      - E:\potentio-api-gateway\ApiGateway\QuestionBank\Admin\Admin:/app
+      - D:\potenti-o-meter gateway\ApiGateway\QuestionBank\Admin\Admin:/app
       - C:\Users\Admin\vsdbg\vs2017u5:/remote_debugger:ro
 #$nuget_volume_mapping_servicea$
     entrypoint: tail -f /dev/null
@@ -47,7 +47,7 @@ services:
       - DOTNET_USE_POLLING_FILE_WATCHER=1
       #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_serviceb$
     volumes:
-      - E:\potentio-api-gateway\ApiGateway\UserLogin\UserLoginAPI\UserLoginAPI:/app
+      - D:\potenti-o-meter gateway\ApiGateway\UserLogin\UserLoginAPI\UserLoginAPI:/app
       - C:\Users\Admin\vsdbg\vs2017u5:/remote_debugger:ro
 #$nuget_volume_mapping_serviceb$
     entrypoint: tail -f /dev/null

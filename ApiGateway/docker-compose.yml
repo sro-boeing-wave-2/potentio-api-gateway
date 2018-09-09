@@ -1,13 +1,13 @@
 version: '3.4'
 
 services:
-  sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
+  db:
+    image: microsoft/mssql-server-linux
     environment:
       SA_PASSWORD: "YourStrongP@ssword"
       ACCEPT_EULA: "Y"
 
-  nosql.data:
+  dbb:
     image: mongo
     ports:
       - "27017:27017"
@@ -18,7 +18,7 @@ services:
       context: ./QuestionBank/Admin/Admin
       dockerfile: Dockerfile
     depends_on:
-      - nosql.data
+      - dbb
 
   serviceb:
     image: userlogin
@@ -26,7 +26,7 @@ services:
       context: ./UserLogin/UserLoginAPI/UserLoginAPI
       dockerfile: Dockerfile
     depends_on:
-      - sql.data
+      - db
 
   servicec:
     image: result
@@ -34,7 +34,7 @@ services:
       context: ./Result/Result/Result
       dockerfile: Dockerfile
     depends_on:
-      - nosql.data
+      - dbb
 
   gateway:
     image: gateway
