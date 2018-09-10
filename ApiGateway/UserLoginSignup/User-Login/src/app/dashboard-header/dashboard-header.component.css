@@ -1,0 +1,24 @@
+
+.example-fill-remaining-space{
+flex: 1 1 auto;
+}
+.menuButton{
+    background-color: none;
+    padding: 0px 0px 0px 0px;
+
+}
+.menuItemContainer{
+margin-top: 10%;
+}
+.splash{
+    height: 25rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    background-image: url("../../images/background-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+a{
+    padding: 10px 10px 10px 10px;
+}

@@ -1,0 +1,19 @@
+<div class="splash">
+<mat-toolbar color="primary">
+  <span>Potentio-O-Meter</span>
+  <span class="example-fill-remaining-space"></span>
+  <a>Start Test</a>
+  <a>Result</a>
+  <mat-icon>
+    account_circle
+  </mat-icon>
+  <a [matMenuTriggerFor]="menu" class="menuButton">Preety Kumari
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </a>
+  <mat-menu #menu="matMenu" class="menuItemContainer" [overlapTrigger]="false">
+      <a mat-menu-item>View Profile</a>
+    <a mat-menu-item>Settings</a>
+    <a mat-menu-item (click)="Logout()">LogOut</a>
+  </mat-menu>
+</mat-toolbar>
+</div>

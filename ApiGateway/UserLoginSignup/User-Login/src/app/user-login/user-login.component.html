@@ -1,0 +1,21 @@
+<a class="clear" (click)="Close()">
+  <mat-icon>clear</mat-icon>
+</a>
+<div>
+  <h1 class="heading">Log In</h1>
+</div>
+<form [formGroup]=" CreateLoginForm" (ngSubmit)="onSubmit()">
+  <label>
+    <input class="input-val" type="text" formControlName="Email" placeholder="UserName or Email" />
+  </label>
+  <br>
+  <label>
+    <input class="input-val" type="password" formControlName="Password" placeholder="Password" />
+  </label>
+  <br>
+  <button class="btn" type="submit">Login</button>
+  <br>
+  <div class="logInText">Don't Have an Account?
+    <a class="linkText" (click)="SignUp()">SignUp</a>
+  </div>
+</form>

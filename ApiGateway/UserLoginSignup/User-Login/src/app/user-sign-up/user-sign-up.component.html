@@ -1,0 +1,27 @@
+<a class="clear" (click)="GoBack()">
+    <mat-icon>clear</mat-icon>
+</a>
+<h1 class="heading">Sign Up</h1>
+<form [formGroup]=" CreateSignUpForm" (ngSubmit)="onSubmit()">
+    <label>
+        <input class="input-val" type="text" formControlName="FirstName" placeholder="FirstName"  />
+    </label>
+    <label>
+        <input class="input-val" type="text" formControlName="LastName" placeholder="LastName" />
+    </label>
+    <label>
+        <input class="input-val" type="text" formControlName="Contact" placeholder="Contact" />
+    </label>
+    <br>
+    <label>
+        <input class="input-val" type="email" formControlName="Email" placeholder="UserName or Email" />
+    </label>
+    <br>
+    <label>
+        <input class="input-val" type="password" formControlName="Password" placeholder="Password" />
+    </label>
+    <br>
+    
+    <button class="btn" type="submit">SignUp</button>
+    <br>
+</form>
