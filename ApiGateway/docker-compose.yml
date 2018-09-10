@@ -17,6 +17,8 @@ services:
     build:
       context: ./QuestionBank/Admin/Admin
       dockerfile: Dockerfile
+    ports:
+      - "32791:80"
     depends_on:
       - dbb
 

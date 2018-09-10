@@ -1,53 +1,17 @@
 ﻿{
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/",
+      "DownstreamPathTemplate": "/api/questions/",
       "DownstreamScheme": "http",
-      "DownstreamPort": 80,
-      "DownstreamHost": "servicea",
-      "UpstreamPathTemplate": "/a/",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
-    },
-    {
-      "DownstreamPathTemplate": "/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamPort": 80,
-      "DownstreamHost": "servicea",
-      "UpstreamPathTemplate": "/a/{everything}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
-    },
-    {
-      "DownstreamPathTemplate": "/",
-      "DownstreamScheme": "http",
-      "DownstreamPort": 80,
-      "DownstreamHost": "serviceb",
-      "UpstreamPathTemplate": "/b/",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
-    },
-    {
-      "DownstreamPathTemplate": "/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamPort": 80,
-      "DownstreamHost": "serviceb",
-      "UpstreamPathTemplate": "/b/{everything}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
-    },
-    {
-      "DownstreamPathTemplate": "/",
-      "DownstreamScheme": "http",
-      "DownstreamPort": 80,
-      "DownstreamHost": "servicec",
-      "UpstreamPathTemplate": "/c/",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
-    },
-    {
-      "DownstreamPathTemplate": "/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamPort": 80,
-      "DownstreamHost": "servicec",
-      "UpstreamPathTemplate": "/c/{everything}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
-    }
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 32791
+        }
+      ],
+      "UpstreamPathTemplate": "/questionbank/",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    } 
   ],
   "GlobalConfiguration": {}
 }
