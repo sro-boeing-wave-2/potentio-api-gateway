@@ -1,0 +1,17 @@
+﻿{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/questions/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44334
+        }
+      ],
+      "UpstreamPathTemplate": "/questionbank/",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    } 
+  ],
+  "GlobalConfiguration": {}
+}
