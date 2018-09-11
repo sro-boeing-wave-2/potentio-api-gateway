@@ -1,7 +1,7 @@
 ﻿{
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/api/questions/",
+      "DownstreamPathTemplate": "/api/questions",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -9,9 +9,12 @@
           "Port": 32791
         }
       ],
-      "UpstreamPathTemplate": "/questionbank/",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamPathTemplate": "/questionbank",
+      "UpstreamHttpMethod": [ "Get" ],
+      "ServiceName": "seavicea"
     } 
   ],
-  "GlobalConfiguration": {}
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:32792"
+  }
 }
