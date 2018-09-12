@@ -5,13 +5,49 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "172.21.96.1",
+          "Host": "172.26.0.1",
           "Port": 44334
         }
       ],
       "UpstreamPathTemplate": "/questionbank/",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
-    } 
+    },
+    {
+      "DownstreamPathTemplate": "/api/users/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "172.26.0.1",
+          "Port": 5050
+        }
+      ],
+      "UpstreamPathTemplate": "/login/",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/QuizResult/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "172.26.0.1",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/result/",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/question/getall",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "172.26.0.1",
+          "Port": 9100
+        }
+      ],
+      "UpstreamPathTemplate": "/quizEngine/",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    }
   ],
   "GlobalConfiguration": {}
 }
