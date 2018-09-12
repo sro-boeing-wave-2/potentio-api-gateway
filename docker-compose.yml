@@ -4,4 +4,6 @@ services:
   gateway:
     build:
       context: ./Gateway
-    network_mode: host
+    ports: 
+      - "5000:5000"
+   
