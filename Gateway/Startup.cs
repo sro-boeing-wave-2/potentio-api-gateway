@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Microsoft.Extensions.Logging;
+//using Ocelot.Provider.Consul;
 using ConfigurationBuilder = Microsoft.Extensions.Configuration.ConfigurationBuilder;
 
 namespace Gateway
@@ -37,6 +38,8 @@ namespace Gateway
                 Console.WriteLine(provider.GetType());
             }
             services.AddOcelot(Configuration);
+                //.AddConsul();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

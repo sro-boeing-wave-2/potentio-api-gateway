@@ -1,15 +1,27 @@
 ﻿{
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/api/questions/",
+      "DownstreamPathTemplate": "/api/questions",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "172.26.0.1",
+          "Host": "172.27.43.33",
           "Port": 44334
         }
       ],
-      "UpstreamPathTemplate": "/questionbank/",
+      "UpstreamPathTemplate": "/questionbank",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/questions/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "172.27.43.33",
+          "Port": 44334
+        }
+      ],
+      "UpstreamPathTemplate": "/questionbank/{url}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
     {
@@ -17,19 +29,35 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "172.26.0.1",
+          "Host": "172.27.43.33",
           "Port": 5050
         }
       ],
       "UpstreamPathTemplate": "/login/",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
+
+    {
+      "DownstreamPathTemplate": "/api/users/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "172.27.43.33",
+          "Port": 5050
+        }
+      ],
+      "UpstreamPathTemplate": "/login/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+
+
+
     {
       "DownstreamPathTemplate": "/api/QuizResult/",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "172.26.0.1",
+          "Host": "172.27.43.33",
           "Port": 80
         }
       ],
@@ -37,17 +65,23 @@
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
     {
-      "DownstreamPathTemplate": "/api/question/getall",
+      "DownstreamPathTemplate": "/api/question/{url}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "172.26.0.1",
-          "Port": 9100
+          "Host": "172.27.43.33",
+          "Port": 8010
         }
       ],
-      "UpstreamPathTemplate": "/quizEngine/",
+      "UpstreamPathTemplate": "/quizEngine/{url}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     }
   ],
-  "GlobalConfiguration": {}
+  "GlobalConfiguration": {
+    //"ServiceDiscoveryProvider": {
+    //  "Host": "172.27.43.33",
+    //  "Port": 44334,
+    //  "Type": "Consul"
+    //}
+  }
 }
