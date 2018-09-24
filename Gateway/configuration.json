@@ -1,7 +1,7 @@
 ﻿{
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/home/",
+      "DownstreamPathTemplate": "/home",
       "DownstreamScheme": "http",
       "ServiceName": "DisplayUI",
       "UpstreamPathTemplate": "/home/",
