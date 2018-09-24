@@ -3,7 +3,7 @@
     {
       "DownstreamPathTemplate": "/home/",
       "DownstreamScheme": "http",
-      "ServiceName": "UI",
+      "ServiceName": "DisplayUI",
       "UpstreamPathTemplate": "/home/",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
