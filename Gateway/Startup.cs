@@ -81,7 +81,7 @@ namespace Gateway
                 //}
                 if (context.Request.Path == "/auth/login" || context.Request.Path == "/auth/register" ||
                 context.Request.Path == "/auth" || context.Request.Path == "/auth/email" ||
-                context.Request.Path == "/auth/logout" || context.Request.Path == "/auth/details")
+                context.Request.Path == "/auth/logout" || context.Request.Path == "/auth/details" || context.Request.Path == "/home/")
                 {
                     await next();
                 }
