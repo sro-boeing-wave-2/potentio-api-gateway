@@ -1,13 +1,6 @@
 ﻿{
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/home",
-      "DownstreamScheme": "http",
-      "ServiceName": "DisplayUI",
-      "UpstreamPathTemplate": "/home",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
-    },
-    {
       "DownstreamPathTemplate": "/api/questions",
       "DownstreamScheme": "http",
       "ServiceName": "QuestionBank",
