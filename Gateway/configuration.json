@@ -97,7 +97,8 @@
       "DownstreamScheme": "http",
       "ServiceName": "Result",
       "UpstreamPathTemplate": "/result/quiz/{quizId}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+					"UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+
     },
     {
       "DownstreamPathTemplate": "/api/QuizResult/domains?userId={id}",
