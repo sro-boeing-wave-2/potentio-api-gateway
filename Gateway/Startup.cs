@@ -50,7 +50,7 @@ namespace Gateway
                    .AllowCredentials()
                 )
             );
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddOcelot(Configuration).AddConsul();
             services.AddSignalR();
 
@@ -132,7 +132,7 @@ namespace Gateway
             //    }
             //});
             // app.UseOcelot().Wait();
-            app.Use(async (context, next) => { Console.WriteLine("Next middleware"); await next(); });
+            //app.Use(async (context, next) => { Console.WriteLine("Next middleware"); await next(); });
             app.UseOcelot().Wait();
         }
     }
