@@ -17,6 +17,7 @@ using Consul;
 using Chilkat;
 using System.Text;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.SignalR.Client;
 
 namespace Gateway
 {
