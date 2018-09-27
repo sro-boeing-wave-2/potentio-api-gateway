@@ -39,10 +39,6 @@ namespace Gateway
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            foreach (var provider in Configuration.Providers)
-            {
-                Console.WriteLine(provider.GetType());
-            }
             services.AddCors(o => o.AddPolicy("AppPolicy", builder =>
             builder.AllowAnyHeader()
                    .AllowAnyMethod()
@@ -127,7 +123,7 @@ namespace Gateway
             //});
             // app.UseOcelot().Wait();
             //app.Use(async (context, next) => { Console.WriteLine("Next middleware"); await next(); });
-            //app.UseWebSockets();
+            app.UseWebSockets();
             app.UseOcelot().Wait();
         }
     }
