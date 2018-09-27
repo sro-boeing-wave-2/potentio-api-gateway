@@ -97,7 +97,7 @@
       "DownstreamScheme": "http",
       "ServiceName": "Result",
       "UpstreamPathTemplate": "/result/quiz/{quizId}",
-					"UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
 
     },
     {
@@ -134,6 +134,19 @@
       "ServiceName": "QuizEngine",
       "UpstreamPathTemplate": "/quizEngine/{url}/",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/{catchAll}",
+      "DownstreamScheme": "ws",
+      "ServiceName": "QuizEngine",
+      "UpstreamPathTemplate": "/quizEngine/{catchAll}",
+      "UpstreamHttpMethod": [
+        "POST",
+        "PUT",
+        "GET",
+        "DELETE",
+        "OPTIONS"
+      ]
     },
     {
       "DownstreamPathTemplate": "/{url}",

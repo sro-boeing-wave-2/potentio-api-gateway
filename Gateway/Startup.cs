@@ -136,6 +136,7 @@ namespace Gateway
             // app.UseOcelot().Wait();
             //app.Use(async (context, next) => { Console.WriteLine("Next middleware"); await next(); });
             app.UseOcelot().Wait();
+            app.UseWebSockets();
         }
     }
 }
