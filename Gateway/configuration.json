@@ -143,38 +143,25 @@
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
     {
-      "DownstreamPathTemplate": "/{catchAll}",
-      "DownstreamScheme": "ws",
-      "ServiceName": "QuizEngine",
-      "UpstreamPathTemplate": "/quizEngine/{catchAll}",
-      "UpstreamHttpMethod": [
-        "POST",
-        "PUT",
-        "GET",
-        "DELETE",
-        "OPTIONS"
-      ]
-    },
-    {
-      "DownstreamPathTemplate": "/question?{catchAll}",
-      "DownstreamScheme": "ws",
-      "ServiceName": "QuizEngine",
-      "UpstreamPathTemplate": "/quizEngine?{catchAll}",
-      "UpstreamHttpMethod": [
-        "POST",
-        "PUT",
-        "GET",
-        "DELETE",
-        "OPTIONS"
-      ]
-    },
-    {
       "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "http",
       "ServiceName": "DisplayUI",
       "UpstreamPathTemplate": "/{url}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
-    }
+    },
+    {
+      "DownstreamPathTemplate": "/{catchAll}",
+      "DownstreamScheme": "ws",
+      "ServiceName": "QuizEngine",
+      "UpstreamPathTemplate": "/{catchAll}",
+      "UpstreamHttpMethod": [
+        "POST",
+        "PUT",
+        "GET",
+        "DELETE",
+        "OPTIONS"
+      ]
+    },
   ],
   "GlobalConfiguration": {
     "ServiceDiscoveryProvider": {
