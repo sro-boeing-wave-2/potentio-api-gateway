@@ -50,17 +50,18 @@ namespace Gateway
                    .AllowCredentials()
                 )
             );
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddOcelot(Configuration).AddConsul();
-            services.AddSignalR();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseCors("AppPolicy");
-
+            app.Use(async (context, next) =>
+            {
+                Console.WriteLine(context.Request.Path);
+                await next();
+            });
             //app.Use(async (context, next) =>
             //{
 
