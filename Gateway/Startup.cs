@@ -54,11 +54,6 @@ namespace Gateway
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseCors("AppPolicy");
-            app.Use(async (context, next) =>
-            {
-                Console.WriteLine(context.Request.GetDisplayUrl());
-                await next();
-            });
             //app.Use(async (context, next) =>
             //{
 
