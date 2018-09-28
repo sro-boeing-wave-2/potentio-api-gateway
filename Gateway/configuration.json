@@ -137,7 +137,7 @@
     },
     {
       "DownstreamPathTemplate": "/question{url}",
-      "DownstreamScheme": "http",
+      //"DownstreamScheme": "http",
       "ServiceName": "QuizEngine",
       "UpstreamPathTemplate": "/quizEngine/start{url}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
