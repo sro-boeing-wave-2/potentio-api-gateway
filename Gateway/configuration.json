@@ -144,9 +144,17 @@
     },
     {
       "DownstreamPathTemplate": "/question?{url}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "ws",
       "ServiceName": "QuizEngine",
       "UpstreamPathTemplate": "/quizEngine/start?{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "OPTIONS" ]
+    },
+    //my addition
+    {
+      "DownstreamPathTemplate": "/question/",
+      "DownstreamScheme": "http",
+      "ServiceName": "QuizEngine",
+      "UpstreamPathTemplate": "/quizEngine/start/",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "OPTIONS" ]
     },
     //{
@@ -162,7 +170,7 @@
       "ServiceName": "DisplayUI",
       "UpstreamPathTemplate": "/{url}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
-    },
+    }
     //{
     //  "DownstreamPathTemplate": "/{catchAll}",
     //  "DownstreamScheme": "ws",
