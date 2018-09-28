@@ -115,7 +115,7 @@
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
     {
-      "DownstreamPathTemplate": "/question/negotiate",
+      "DownstreamPathTemplate": "/start/negotiate",
       "DownstreamScheme": "http",
       "ServiceName": "QuizEngine",
       "UpstreamPathTemplate": "/quizEngine/start/negotiate",
