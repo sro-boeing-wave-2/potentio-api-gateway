@@ -16,7 +16,7 @@ using Microsoft.AspNetCore.Mvc;
 using Consul;
 using Chilkat;
 using System.Text;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.SignalR.Client;
 
 namespace Gateway
@@ -56,7 +56,7 @@ namespace Gateway
             app.UseCors("AppPolicy");
             app.Use(async (context, next) =>
             {
-                Console.WriteLine(context.Request.Path);
+                Console.WriteLine(context.Request.GetDisplayUrl());
                 await next();
             });
             //app.Use(async (context, next) =>
