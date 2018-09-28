@@ -143,6 +143,13 @@
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
     {
+      "DownstreamPathTemplate": "/question{url}",
+      "DownstreamScheme": "ws",
+      "ServiceName": "QuizEngine",
+      "UpstreamPathTemplate": "/quizEngine/start{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
       "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "http",
       "ServiceName": "DisplayUI",
