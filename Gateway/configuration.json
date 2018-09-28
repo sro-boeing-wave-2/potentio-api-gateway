@@ -114,13 +114,13 @@
       "UpstreamPathTemplate": "/result/{id}/{domain}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
-    {
-      "DownstreamPathTemplate": "/question/{catchAll}",
-      "DownstreamScheme": "http",
-      "ServiceName": "QuizEngine",
-      "UpstreamPathTemplate": "/quizEngine/start/{catchAll}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
-    },
+    //{
+    //  "DownstreamPathTemplate": "/question/{catchAll}",
+    //  "DownstreamScheme": "http",
+    //  "ServiceName": "QuizEngine",
+    //  "UpstreamPathTemplate": "/quizEngine/start/{catchAll}",
+    //  "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    //},
     {
       "DownstreamPathTemplate": "/api/question/{url}",
       "DownstreamScheme": "http",
@@ -136,18 +136,19 @@
     //  "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     //},
     {
-      "DownstreamPathTemplate": "/question?{url}",
+      "DownstreamPathTemplate": "/question/{url}",
+      "DownstreamScheme":  "ws",
       "ServiceName": "QuizEngine",
-      "UpstreamPathTemplate": "/quizEngine/start?{url}",
+      "UpstreamPathTemplate": "/quizEngine/start/{url}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "OPTIONS" ]
     },
-    {
-      "DownstreamPathTemplate": "/question{url}",
-      "DownstreamScheme": "http",
-      "ServiceName": "QuizEngine",
-      "UpstreamPathTemplate": "/quizEngine/start/negotiate{url}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
-    },
+    //{
+    //  "DownstreamPathTemplate": "/question{url}",
+    //  "DownstreamScheme": "http",
+    //  "ServiceName": "QuizEngine",
+    //  "UpstreamPathTemplate": "/quizEngine/start/negotiate{url}",
+    //  "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    //},
     {
       "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "http",
@@ -155,19 +156,19 @@
       "UpstreamPathTemplate": "/{url}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
-    {
-      "DownstreamPathTemplate": "/{catchAll}",
-      "DownstreamScheme": "ws",
-      "ServiceName": "QuizEngine",
-      "UpstreamPathTemplate": "/{catchAll}",
-      "UpstreamHttpMethod": [
-        "POST",
-        "PUT",
-        "GET",
-        "DELETE",
-        "OPTIONS"
-      ]
-    }
+    //{
+    //  "DownstreamPathTemplate": "/{catchAll}",
+    //  "DownstreamScheme": "ws",
+    //  "ServiceName": "QuizEngine",
+    //  "UpstreamPathTemplate": "/{catchAll}",
+    //  "UpstreamHttpMethod": [
+    //    "POST",
+    //    "PUT",
+    //    "GET",
+    //    "DELETE",
+    //    "OPTIONS"
+    //  ]
+    //}
   ],
   "GlobalConfiguration": {
     "ServiceDiscoveryProvider": {
