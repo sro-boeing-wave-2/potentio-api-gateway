@@ -5,142 +5,133 @@
       "DownstreamScheme": "http",
       "ServiceName": "QuestionBank",
       "UpstreamPathTemplate": "/questionbank/",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/api/questions/domain/",
       "DownstreamScheme": "http",
       "ServiceName": "QuestionBank",
       "UpstreamPathTemplate": "/questionbank/domain/",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/api/questions/domain/{url}",
       "DownstreamScheme": "http",
       "ServiceName": "QuestionBank",
       "UpstreamPathTemplate": "/questionbank/domain/{url}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/api/questions/id/{url}",
       "DownstreamScheme": "http",
       "ServiceName": "QuestionBank",
       "UpstreamPathTemplate": "/questionbank/id/{url}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/api/questions/difficultylevel/{url}",
       "DownstreamScheme": "http",
       "ServiceName": "QuestionBank",
       "UpstreamPathTemplate": "/questionbank/level/{url}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/api/questions/tag/{url}",
       "DownstreamScheme": "http",
       "ServiceName": "QuestionBank",
       "UpstreamPathTemplate": "/questionbank/tag/{url}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/api/questions/{url}",
       "DownstreamScheme": "http",
       "ServiceName": "QuestionBank",
       "UpstreamPathTemplate": "/questionbank/{url}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/api/conceptmap/",
       "DownstreamScheme": "http",
       "ServiceName": "ConceptMap",
       "UpstreamPathTemplate": "/conceptmap/",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/api/conceptmap/{url}",
       "DownstreamScheme": "http",
       "ServiceName": "ConceptMap",
       "UpstreamPathTemplate": "/conceptmap/{url}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/api/users/",
       "DownstreamScheme": "http",
       "ServiceName": "Authentication",
       "UpstreamPathTemplate": "/auth/",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
-
     {
       "DownstreamPathTemplate": "/api/users/{url}",
       "DownstreamScheme": "http",
       "ServiceName": "Authentication",
       "UpstreamPathTemplate": "/auth/{url}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/api/QuizResult/",
       "DownstreamScheme": "http",
       "ServiceName": "Result",
       "UpstreamPathTemplate": "/result/",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/api/QuizResult/all/",
       "DownstreamScheme": "http",
       "ServiceName": "Result",
       "UpstreamPathTemplate": "/result/quiz/all",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/api/QuizResult/quizid/{quizId}",
       "DownstreamScheme": "http",
       "ServiceName": "Result",
       "UpstreamPathTemplate": "/result/quiz/{quizId}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
-
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/api/QuizResult/domains?userId={id}",
       "DownstreamScheme": "http",
       "ServiceName": "Result",
       "UpstreamPathTemplate": "/result/user/{id}/domains",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/api/QuizResult?userId={id}&domainName={domain}",
       "DownstreamScheme": "http",
       "ServiceName": "Result",
       "UpstreamPathTemplate": "/result/{id}/{domain}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
-    },
-    {
-      "DownstreamPathTemplate": "/start/negotiate",
-      "DownstreamScheme": "http",
-      "ServiceName": "QuizEngine",
-      "UpstreamPathTemplate": "/quizEngine/start/negotiate",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "OPTIONS" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/{catchAll}",
       "DownstreamScheme": "ws",
       "ServiceName": "QuizEngine",
       "UpstreamPathTemplate": "/quizEngine/{catchAll}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "OPTIONS" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "http",
       "ServiceName": "QuestionBankUI",
       "UpstreamPathTemplate": "/admin/{url}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "OPTIONS" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "http",
       "ServiceName": "DisplayUI",
       "UpstreamPathTemplate": "/{url}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     }
   ],
   "GlobalConfiguration": {
