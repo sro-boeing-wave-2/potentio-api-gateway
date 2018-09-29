@@ -123,6 +123,7 @@
       "DownstreamPathTemplate": "/admin/{catchall}",
       "DownstreamScheme": "http",
       "ServiceName": "QuestionBankUI",
+      "Priority": 1,
       "UpstreamPathTemplate": "/admin/{catchall}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
