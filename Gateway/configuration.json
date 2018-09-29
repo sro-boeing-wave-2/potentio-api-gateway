@@ -120,9 +120,8 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
-      "DownstreamPathTemplate": "/",
+      "DownstreamPathTemplate": "/admin",
       "DownstreamScheme": "http",
-      "Priority": 1,
       "ServiceName": "QuestionBankUI",
       "UpstreamPathTemplate": "/admin/",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
