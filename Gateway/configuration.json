@@ -127,6 +127,20 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
+      "DownstreamPathTemplate": "/admin/{catchAll}",
+      "DownstreamScheme": "http",
+      "ServiceName": "QuestionBankUI",
+      "UpstreamPathTemplate": "/admin/{catchAll}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+    },
+    {
+      "DownstreamPathTemplate": "/",
+      "DownstreamScheme": "http",
+      "ServiceName": "QuestionBankUI",
+      "UpstreamPathTemplate": "/admin",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+    },
+    {
       "DownstreamPathTemplate": "/{catchAll}",
       "DownstreamScheme": "ws",
       "ServiceName": "QuizEngine",
