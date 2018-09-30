@@ -99,6 +99,13 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
+      "DownstreamPathTemplate": "/{catch}",
+      "DownstreamScheme": "http",
+      "ServiceName": "QuestionBankUI",
+      "UpstreamPathTemplate": "/admin/{catch}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+    },
+    {
       "DownstreamPathTemplate": "/api/QuizResult/domains?userId={id}",
       "DownstreamScheme": "http",
       "ServiceName": "Result",
@@ -117,13 +124,6 @@
       "DownstreamScheme": "ws",
       "ServiceName": "QuizEngine",
       "UpstreamPathTemplate": "/quizEngine/{catchAll}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
-    },
-    {
-      "DownstreamPathTemplate": "/admin",
-      "DownstreamScheme": "http",
-      "ServiceName": "QuestionBankUI",
-      "UpstreamPathTemplate": "/admin",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
