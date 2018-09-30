@@ -19,6 +19,11 @@ namespace Gateway
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureLogging((hostingContext, logging) =>
+                {
+                    logging.AddConsole();
+                    logging.AddDebug(); 
+                })
                 .UseStartup<Startup>();
     }
 }
