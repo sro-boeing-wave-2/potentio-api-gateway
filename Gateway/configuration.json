@@ -113,6 +113,13 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
+      "DownstreamPathTemplate": "/ontology/{catch}",
+      "DownstreamScheme": "http",
+      "ServiceName": "ontology-manager",
+      "UpstreamPathTemplate": "/ontology/{catch}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+    },
+    {
       "DownstreamPathTemplate": "/{catchAll}",
       "DownstreamScheme": "ws",
       "ServiceName": "QuizEngine",
