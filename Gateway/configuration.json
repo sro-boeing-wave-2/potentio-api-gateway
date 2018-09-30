@@ -113,10 +113,10 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
-      "DownstreamPathTemplate": "/ontology/{catch}",
+      "DownstreamPathTemplate": "/ontology/",
       "DownstreamScheme": "http",
       "ServiceName": "ontology-manager",
-      "UpstreamPathTemplate": "/ontology/{catch}",
+      "UpstreamPathTemplate": "/ontology/",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
