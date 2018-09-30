@@ -130,7 +130,7 @@
       "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "http",
       "ServiceName": "DisplayUI",
-      "UpstreamPathTemplate": "/potentio/{url}",
+      "UpstreamPathTemplate": "/{url}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     }
   ],
