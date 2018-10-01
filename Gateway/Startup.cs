@@ -64,8 +64,8 @@ namespace Gateway
                //{
                //    context.Request.Headers.Add("Authorization", $"Bearer {token1}");
                //}
-               if (context.Request.Path == "/auth/login" || context.Request.Path == "/auth/register" ||
-               //context.Request.Path == "/auth" || context.Request.Path == "/auth/email" ||
+               if (context.Request.Path == "/auth/login" || context.Request.Path == "/auth/register" || context.Request.Path == "/" ||
+               //context.Request.Path == "/auth" || context.Request.Path == "/auth/email" || 
                context.Request.Path == "/auth/logout" || /*context.Request.Path == "/auth/details" ||*/ context.Request.Path == "/home")
                {
                    Console.WriteLine("Calling next middleware");
