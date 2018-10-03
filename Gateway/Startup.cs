@@ -65,7 +65,7 @@ namespace Gateway
                 //{
                 //    context.Request.Headers.Add("Authorization", $"Bearer {token1}");
                 //}
-                string reg = "[a-zA-z]*.js";
+                string reg = "/[a-zA-z]*.js";
                 string requestPath = context.Request.Path.ToString();
                 string homepage = "/";
                 if (Regex.IsMatch(requestPath,homepage + reg))
