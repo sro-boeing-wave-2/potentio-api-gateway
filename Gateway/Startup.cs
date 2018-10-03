@@ -65,25 +65,25 @@ namespace Gateway
                 //{
                 //    context.Request.Headers.Add("Authorization", $"Bearer {token1}");
                 //}
-                string reg = "/[a-zA-z]*.js";
-                string requestPath = context.Request.Path.ToString();
-                string homepage = "/";
-                if (Regex.IsMatch(requestPath,"//[a-zA-Z]*.js"))
-                {
-                    await next();
-                }
-
-                //switch (context.Request.Path.ToString())
+                //string reg = "/[a-zA-z]*.js";
+                //string requestPath = context.Request.Path.ToString();
+                //string homepage = "/";
+                //if (Regex.IsMatch(requestPath,"//[a-zA-Z]*.js"))
                 //{
-                //    case "/auth/login":
-                //    case "/auth/register":
-                //    case "/":
-                //    case "/auth/logout":
-                //    case "/home":
-                //        Console.WriteLine("Calling next middleware");
-                //        await next();
-                //        break;
+                //    await next();
                 //}
+
+                switch (context.Request.Path.ToString())
+                {
+                    case "/auth/login":
+                    case "/auth/register":
+                    case "/":
+                    case "/auth/logout":
+                    case "/home":
+                        Console.WriteLine("Calling next middleware");
+                        await next();
+                        break;
+                }
 
                 //if (_context.Request.Query.TryGetValue("access_token", out var token))
                 //{
