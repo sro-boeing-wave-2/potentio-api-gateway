@@ -108,7 +108,7 @@ namespace Gateway
                 using (var client = new ConsulClient())
                 {
                     string ConsulIP = Environment.GetEnvironmentVariable("MACHINE_LOCAL_IP4");
-                    client.Config.Address = new Uri(Environment.GetEnvironmentVariable("MACHINE_LOCAL_IP4") + ":8500");
+                    client.Config.Address = new Uri(Environment.GetEnvironmentVariable("MACHINE_LOCAL_IPV4") + ":8500");
                     //client.Config.Address = new Uri("http://172.17.0.1:8500");
                     var getPair = await client.KV.Get("secretkey");
                     string token = context.Request.Cookies["UserLoginAPItoken"];
