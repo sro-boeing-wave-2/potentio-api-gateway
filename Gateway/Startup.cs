@@ -72,12 +72,22 @@ namespace Gateway
                 //{
                 //    await next();
                 //}
+                var runtimejs = "/runtime.js";
+                var polyfillsjs = "/polyfills.js";
+                var stylesjs = "/styles.js";
+                var vendorjs = "/vendor.js";
+                var mainjs = "/main.js";
 
                 switch (context.Request.Path.ToString())
                 {
                     case "/auth/login":
                     case "/auth/register":
                     case "/":
+                    case "/runtime.js":
+                    case "/polyfills.js":
+                    case "/styles.js":
+                    case "/vendor.js":
+                    case "/main.js":
                     case "/auth/logout":
                     case "/home":
                         Console.WriteLine("Calling next middleware");
