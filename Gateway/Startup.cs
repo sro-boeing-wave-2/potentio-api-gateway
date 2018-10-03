@@ -68,7 +68,7 @@ namespace Gateway
                 string reg = "/[a-zA-z]*.js";
                 string requestPath = context.Request.Path.ToString();
                 string homepage = "/";
-                if (requestPath == "/" || Regex.IsMatch(requestPath, "/[a-zA-Z]*.js"))
+                if (requestPath == "/" || requestPath == "/home" || Regex.IsMatch(requestPath, "/[a-zA-Z]*.js") || Regex.IsMatch(requestPath, "/home/[a-zA-Z]*.js") || Regex.IsMatch(requestPath, "/[a-zA-Z]*.svg") || Regex.IsMatch(requestPath, "/home/[a-zA-Z]*.svg") || Regex.IsMatch(requestPath, "/[a-zA-Z]*.png") || Regex.IsMatch(requestPath, "/home/[a-zA-Z]*.png") || Regex.IsMatch(requestPath, "/[a-zA-Z]*.jpg") || Regex.IsMatch(requestPath, "/home/[a-zA-Z]*.jpg"))
                 {
                     await next();
                 }
