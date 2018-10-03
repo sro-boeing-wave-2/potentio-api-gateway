@@ -141,6 +141,58 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
+      "DownstreamPathTemplate": "/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8080
+        }
+      ],
+      "ServiceName": "cadvisor",
+      "UpstreamPathTemplate": "/cadvisor/",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+    },
+    {
+      "DownstreamPathTemplate": "/{catch}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8080
+        }
+      ],
+      "ServiceName": "cadvisor",
+      "UpstreamPathTemplate": "/cadvisor/{catch}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+    },
+    {
+      "DownstreamPathTemplate": "/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9090
+        }
+      ],
+      "ServiceName": "prometheus",
+      "UpstreamPathTemplate": "/prometheus/",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+    },
+    {
+      "DownstreamPathTemplate": "/{catch}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9090
+        }
+      ],
+      "ServiceName": "prometheus",
+      "UpstreamPathTemplate": "/prometheus/{catch}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+    },
+    {
       "DownstreamPathTemplate": "/{catchAll}",
       "DownstreamScheme": "ws",
       "ServiceName": "QuizEngine",
