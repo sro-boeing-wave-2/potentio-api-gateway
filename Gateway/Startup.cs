@@ -19,6 +19,7 @@ using System.Text;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.AspNetCore.Http;
+using System.Text.RegularExpressions;
 
 namespace Gateway
 {
@@ -64,17 +65,25 @@ namespace Gateway
                 //{
                 //    context.Request.Headers.Add("Authorization", $"Bearer {token1}");
                 //}
-                switch (context.Request.Path.ToString())
+                string reg = "[a-zA-z]*.js";
+                string requestPath = context.Request.Path.ToString();
+                string homepage = "/";
+                if (Regex.IsMatch(requestPath,homepage + reg))
                 {
-                    case "/auth/login":
-                    case "/auth/register":
-                    case "/":
-                    case "/auth/logout":
-                    case "/home":
-                        Console.WriteLine("Calling next middleware");
-                        await next();
-                        break;
+                    await next();
                 }
+
+                //switch (context.Request.Path.ToString())
+                //{
+                //    case "/auth/login":
+                //    case "/auth/register":
+                //    case "/":
+                //    case "/auth/logout":
+                //    case "/home":
+                //        Console.WriteLine("Calling next middleware");
+                //        await next();
+                //        break;
+                //}
 
                 //if (_context.Request.Query.TryGetValue("access_token", out var token))
                 //{
