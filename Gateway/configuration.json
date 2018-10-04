@@ -195,14 +195,14 @@
     {
       "DownstreamPathTemplate": "/",
       "DownstreamScheme": "http",
-      "ServiceName": "KnowledgeState-7474",
+      "ServiceName": "KnowledgeState",
       "UpstreamPathTemplate": "/knowledgestate/",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
       "DownstreamPathTemplate": "/{catch}",
       "DownstreamScheme": "http",
-      "ServiceName": "KnowledgeState-7474",
+      "ServiceName": "KnowledgeState",
       "UpstreamPathTemplate": "/knowledgestate/{catch}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
