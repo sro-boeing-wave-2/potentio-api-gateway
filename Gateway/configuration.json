@@ -200,10 +200,10 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
-      "DownstreamPathTemplate": "/api/contentrecommender/id/{id}/{domain}",
+      "DownstreamPathTemplate": "/api/{catchAll}",
       "DownstreamScheme": "http",
       "ServiceName": "QuizEngine",
-      "UpstreamPathTemplate": "/qeapi/{id}/{domain}",
+      "UpstreamPathTemplate": "/api/{catchAll}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
