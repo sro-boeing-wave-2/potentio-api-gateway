@@ -193,6 +193,32 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
+      "DownstreamPathTemplate": "/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7474
+        }
+      ],
+      "ServiceName": "KnowledgeState",
+      "UpstreamPathTemplate": "/knowledgestate/",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+    },
+    {
+      "DownstreamPathTemplate": "/{catch}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7474
+        }
+      ],
+      "ServiceName": "KnowledgeState",
+      "UpstreamPathTemplate": "/knowledgestate/{catch}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+    },
+    {
       "DownstreamPathTemplate": "/{catchAll}",
       "DownstreamScheme": "ws",
       "ServiceName": "QuizEngine",
