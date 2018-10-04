@@ -71,14 +71,14 @@ namespace Gateway
                 if (
                 requestPath == "/" || 
                 requestPath == "/home" || 
-                Regex.IsMatch(requestPath, "/([a-zA-Z/]*[/]*)*.js") || 
-                Regex.IsMatch(requestPath, "/home/([a-zA-Z/]*[/]*)*.js") || 
-                Regex.IsMatch(requestPath, "/([a-zA-Z/]*[/]*)*.svg") || 
-                Regex.IsMatch(requestPath, "/home/([a-zA-Z/]*[/]*)*.svg") || 
-                Regex.IsMatch(requestPath, "/([a-zA-Z/]*[/]*)*.png") || 
-                Regex.IsMatch(requestPath, "/home/([a-zA-Z/]*[/]*)*.png") || 
-                Regex.IsMatch(requestPath, "/([a-zA-Z/]*[/]*)*.jpg") || 
-                Regex.IsMatch(requestPath, "/home/([a-zA-Z/]*[/]*)*.jpg")
+                Regex.IsMatch(requestPath, "/([a-zA-Z-0-9=._]*[/?]*)*.js") || 
+                Regex.IsMatch(requestPath, "/home/([a-zA-Z-0-9=._]*[/?]*)*.js") || 
+                Regex.IsMatch(requestPath, "/([a-zA-Z-0-9=._]*[/?]*)*.svg") || 
+                Regex.IsMatch(requestPath, "/home/([a-zA-Z-0-9=._]*[/?]*)*.svg") || 
+                Regex.IsMatch(requestPath, "/([a-zA-Z-0-9=._]*[/?]*)*.png") || 
+                Regex.IsMatch(requestPath, "/home/([a-zA-Z-0-9=._]*[/?]*)*.png") || 
+                Regex.IsMatch(requestPath, "/([a-zA-Z-0-9=._]*[/?]*)*.jpg") || 
+                Regex.IsMatch(requestPath, "/home/([a-zA-Z-0-9=._]*[/?]*)*.jpg")
                 )
                 {
                     await next();
