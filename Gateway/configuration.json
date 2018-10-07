@@ -127,7 +127,7 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
-      "DownstreamPathTemplate": "/inferencer/",
+      "DownstreamPathTemplate": "/inferencer",
       "DownstreamScheme": "http",
       "ServiceName": "inferencer",
       "UpstreamPathTemplate": "/inferencer",
