@@ -134,7 +134,7 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     },
     {
-      "DownstreamPathTemplate": "/{catchAll}",
+      "DownstreamPathTemplate": "/inferencer/{catchAll}",
       "DownstreamScheme": "http",
       "ServiceName": "inferencer",
       "UpstreamPathTemplate": "/inferencer/{catchAll}",
